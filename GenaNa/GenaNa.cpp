@@ -1,6 +1,8 @@
 ﻿#include <iostream>
 #include <string>
 
+void start();
+
 
 void game() {
 
@@ -34,14 +36,14 @@ void game() {
 
 
 
+
 }
 
 
 
-int main() {
+void gamestone() {
 
 
-	srand(time(0));
 	std::string b;
 	std::string bot[3]{ "rock", "scissors", "paper" };
 	int c = 0;
@@ -63,11 +65,43 @@ int main() {
 		else {
 			std::cout << "win\n";
 
-
+			start();
 		}
 		c++;
 
 	}
 }
 
+
+void start() {
+	std::cout << "ti kakal segodnia?\n";
+
+	std::string a;
+
+	std::cin >> a;
+
+	if (a == "yes") {
+
+		std::cout << "MOLODEC!\n";
+		game();
+	}
+	else {
+
+		std::cout << "DURAK!\n";
+		gamestone();
+
+	}
+}
+
+
+
+int main() {
+	
+	srand(time(0));
+
+	start();
+
+	
+
+}
 
