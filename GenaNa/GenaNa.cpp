@@ -20,6 +20,7 @@ void game() {
 			std::cout << "win\n";
 			c++;
 
+			
 		}
 		else if (a == b) {
 			std::cout << "draw\n";
@@ -94,14 +95,28 @@ void start() {
 }
 
 
-
 int main() {
+
+	//srand(time(0));
+
+	//start();
+//	char x[4]{'t','e','s', 't'};
+
+	int humbers [5]{ 2,-4,7,9,-6 };
+
 	
-	srand(time(0));
 
-	start();
+	for (int i = 0; i < 5; i++)
+	{
+
+		if (humbers[i] < 0) {
+			std::cout << humbers[i];
+		}
+	
+		
+
+		}
 
 	
-
+	
 }
-
