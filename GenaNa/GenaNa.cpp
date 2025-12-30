@@ -1,5 +1,8 @@
-﻿#include <iostream>
+#include <iostream>
 #include <string>
+#include <vector>
+
+using namespace std;
 
 void start();
 
@@ -77,7 +80,7 @@ void gamestone() {
 void start() {
 	std::cout << "ti kakal segodnia?\n";
 
-	std::string a;
+	string a;
 
 	std::cin >> a;
 
@@ -94,6 +97,25 @@ void start() {
 	}
 }
 
+//https://docs.google.com/document/d/1om947K__I2kWmfEZ1dXwYfzWbCecrz0MVUEBZojgfFA/edit?tab=t.0
+
+void foo()
+{
+int humbers[5];
+vector<int> masive;
+vector<string> sddwed;
+
+masive.push_back(5);
+masive.push_back(2);
+//masive.pop_back();
+int f = masive.back();
+sddwed.push_back("gdfgf");
+masive[1];
+
+int g = masive[1];
+}
+
+
 
 int main() {
 
@@ -103,20 +125,31 @@ int main() {
 //	char x[4]{'t','e','s', 't'};
 
 	int humbers [5]{ 2,-4,7,9,-6 };
-
+	
 	
 
-	for (int i = 0; i < 5; i++)
+		bool flag = true;
+	for (int i = 1; i < 5; i++){
 	{
 
-		if (humbers[i] < 0) {
-			std::cout << humbers[i];
+	//	if (humbers[i] < 0) {
+		//	std::cout << humbers[i];
+		flag = true;
+		for (int j = 0; j < 5 - i; j++)
+			if (humbers[j] < humbers[j + 1]) {
+				int tmp = humbers[j];
+				humbers[j] = humbers[j + 1];
+				humbers[j + 1] = tmp;
+				flag = false;
+			}
 		}
-	
+	if (flag) {
+		break;
+	}
+
 		
 
-		}
-
-	
-	
+	}
+	int f = 0;
+	foo();
 }
